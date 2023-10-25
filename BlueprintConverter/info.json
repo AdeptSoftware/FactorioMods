@@ -1,0 +1,9 @@
+{
+	"name": 		"BlueprintConverter",
+  	"version": 		"0.1.1",
+  	"title": 		"Blueprint Converter",
+  	"author": 		"Adept",
+  	"factorio_version": 	"1.1",
+  	"dependencies": 	["base >= 1.1"],
+  	"description": 		"Placeholder"
+}
