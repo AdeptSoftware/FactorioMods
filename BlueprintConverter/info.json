@@ -1,9 +1,9 @@
 {
 	"name": 		"BlueprintConverter",
-  	"version": 		"0.1.1",
+  	"version": 		"0.1.3",
   	"title": 		"Blueprint Converter",
   	"author": 		"Adept",
   	"factorio_version": 	"1.1",
   	"dependencies": 	["base >= 1.1"],
-  	"description": 		"Placeholder"
+  	"description": 		"Allows you to transfer a blueprint into a requester chest or character request slots.\n\nFeatures:\n0. Saving the request chest to manipulate it: CTRL+SHIFT+S (mouse on the requester chest)\n1. Transferring the blueprint to the request chest: CTRL+SHIFT+V\n2. Disposable requester chest: CTRL+SHIFT+D\n3. Backup character request slots into a request chest: CTRL+SHIFT+B\n4. Restore character request slots: CTRL+SHIFT+R (works with blueprints and requester chests)\n\n[More details on the site!]"
 }
