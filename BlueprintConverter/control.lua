@@ -33,11 +33,6 @@ local function get_blueprint(player)
 			if obj.item_number > 0 then
 	        		return obj
 			end
-	    	elseif obj.is_blueprint_book and obj.active_index then
-	        	local inventory = obj.get_inventory(defines.inventory.item_main)
-	        	if #inventory > 0 then
-	            		return get_blueprint(inventory[obj.active_index])
-	       		end
 	    	end
 	end
     	return nil
@@ -142,9 +137,12 @@ local function backup_request_slots(event)
 	if player and player.character then
 		if g_entity then
 			if g_entity.valid then
-				clear_requests(g_entity)
-				set_requests(g_entity, get_requests(player.character))
-				player.print("The backup is ready!")
+				local requests = get_requests(player.character)
+				if requests then
+					clear_requests(g_entity)
+					set_requests(g_entity, requests)
+					player.print("The backup is ready!")
+				end
 			end
 		else
 			local requests = get_requests(player.character)
@@ -167,9 +165,12 @@ local function restore_request_slots(event)
 	if player and player.character then
 		if g_entity then
 			if g_entity.valid then
-				clear_requests(player.character)
-				set_requests(player.character, get_requests(g_entity))
-				player.print("Restored from object!")
+				local requests = get_requests(g_entity)
+				if requests then
+					clear_requests(player.character)
+					set_requests(player.character, requests)
+					player.print("Restored from object!")
+				end
 			end
 		else
 			local blueprint = get_blueprint(player)
