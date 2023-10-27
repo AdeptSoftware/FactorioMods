@@ -3,17 +3,17 @@
 data:extend{
 	{
             type 		= "custom-input",
-            name 		= "BlueprintConverter_SAVE_ENTITY",
+            name 		= "BlueprintConverter_SAVE_TARGET_ENTITY",
             key_sequence 	= "CONTROL + SHIFT + S"
         },
 	{
             type 		= "custom-input",
-            name 		= "BlueprintConverter_COPY_BLUEPRINT",
+            name 		= "BlueprintConverter_PASTE_BLUEPRINT",
             key_sequence 	= "CONTROL + SHIFT + V"
         },
 	{
             type 		= "custom-input",
-            name 		= "BlueprintConverter_COPY_BLUEPRINT_DISPOSABLE",
+            name 		= "BlueprintConverter_PASTE_BLUEPRINT_DISPOSABLE",
             key_sequence 	= "CONTROL + SHIFT + D"
         },
 	{
