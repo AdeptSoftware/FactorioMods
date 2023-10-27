@@ -131,6 +131,7 @@ local function paste_blueprint(event, is_disposable)
 				end
 			else
 				set_requester_chest(blueprint, blueprint.cost_to_build, is_disposable)
+				player.cursor_stack_temporary = true
 			end
 		end
 	end
