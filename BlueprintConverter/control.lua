@@ -71,7 +71,7 @@ local function get_requests(entity)
 	local requests = {}
 	for index = 1, entity.request_slot_count do
 		local item = entity.get_request_slot(index)
-		if item then
+		if item and item["count"] > 0 then
 			requests[item["name"]] = item["count"]
 			flag = true
 		end
