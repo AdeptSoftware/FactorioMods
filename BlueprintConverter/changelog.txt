@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 28.10.2023
+  Major Features:
+    - Buffer chest support.
+    - Merging the requests of the saved request object with the blueprint or the request object blueprint.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.7
 Date: 28.10.2023
   Bugfixes:

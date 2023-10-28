@@ -25,5 +25,10 @@ data:extend{
             type 		= "custom-input",
             name 		= "BlueprintConverter_RESTORE_REQUEST_SLOTS",
             key_sequence 	= "CONTROL + SHIFT + R"
+        },
+	{
+            type 		= "custom-input",
+            name 		= "BlueprintConverter_BLUEPRINT_MERGING_MODE",
+            key_sequence 	= "CONTROL + SHIFT + M"
         }
 }
