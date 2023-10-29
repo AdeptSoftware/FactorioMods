@@ -99,8 +99,10 @@ end
 local function set_requests(entity, requests)
 	local index = 1
 	for key, count in pairs(requests) do
-		entity.set_request_slot({name = key, count = count}, index)
-		index = index + 1 
+		if count > 0 then							-- check repeat?
+			entity.set_request_slot({name = key, count = count}, index)
+			index = index + 1 
+		end
 	end
 end
 
@@ -120,9 +122,9 @@ local function update_requests(entity, new_requests)
 				end
 			end
 		end
-	else
-		clear_requests(entity)
 	end
+
+	clear_requests(entity)
 	set_requests(entity, new_requests)
 end
 
@@ -210,8 +212,7 @@ local function restore_request_slots(event)
 		else
 			local blueprint = get_blueprint(player)
 			if blueprint then
-				clear_requests(player.character)
-				set_requests(player.character, blueprint2requests(blueprint))
+				update_requests(player.character, blueprint2requests(blueprint))
 				clear_cursor_stack(player)
 				player.print("Restored from blueprint!")
 			end
